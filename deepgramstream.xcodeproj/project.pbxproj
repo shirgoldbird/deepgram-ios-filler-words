@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A31319E2A7DA85A00465AFC /* flash_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A31319D2A7DA85900465AFC /* flash_sound.wav */; };
 		415DE71F2743D62500830ED8 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 415DE71E2743D62500830ED8 /* Starscream */; };
 		418087A8272DEE2C00023B37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418087A7272DEE2C00023B37 /* AppDelegate.swift */; };
 		418087AA272DEE2C00023B37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418087A9272DEE2C00023B37 /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A31319D2A7DA85900465AFC /* flash_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flash_sound.wav; sourceTree = "<group>"; };
 		418087A4272DEE2C00023B37 /* deepgramstream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = deepgramstream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		418087A7272DEE2C00023B37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		418087A9272DEE2C00023B37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				418087AB272DEE2C00023B37 /* ViewController.swift */,
 				418087AD272DEE2C00023B37 /* Main.storyboard */,
 				418087B0272DEE2E00023B37 /* Assets.xcassets */,
+				3A31319D2A7DA85900465AFC /* flash_sound.wav */,
 				418087B2272DEE2E00023B37 /* LaunchScreen.storyboard */,
 				418087B5272DEE2E00023B37 /* Info.plist */,
 			);
@@ -134,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				418087B4272DEE2E00023B37 /* LaunchScreen.storyboard in Resources */,
+				3A31319E2A7DA85A00465AFC /* flash_sound.wav in Resources */,
 				418087B1272DEE2E00023B37 /* Assets.xcassets in Resources */,
 				418087AF272DEE2C00023B37 /* Main.storyboard in Resources */,
 			);

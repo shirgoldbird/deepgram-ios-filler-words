@@ -103,6 +103,11 @@ extension ViewController: WebSocketDelegate {
                 } else {
                     transcriptView.text = transcriptView.text + " " + transcript
                 }
+                
+                // Check for "uh" and "um" and flash the screen red if found
+                if transcript.localizedCaseInsensitiveContains("uh") || transcript.localizedCaseInsensitiveContains("um") {
+                    flashScreenRed()
+                }
             }
         case .error(let error):
             print(error ?? "")
@@ -110,6 +115,33 @@ extension ViewController: WebSocketDelegate {
             break
         }
     }
+    
+    private func flashScreenRed() {
+            let flashView = UIView(frame: view.bounds)
+            flashView.backgroundColor = .red
+            flashView.alpha = 0.7
+            view.addSubview(flashView)
+
+            UIView.animate(withDuration: 0.5, animations: {
+                flashView.alpha = 0
+            }) { _ in
+                flashView.removeFromSuperview()
+            }
+
+            playFlashSound()
+        }
+
+        private func playFlashSound() {
+            // Use AVAudioPlayer to play a sound
+            if let soundURL = Bundle.main.url(forResource: "flash_sound", withExtension: "wav") {
+                do {
+                    let audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+                    audioPlayer.play()
+                } catch {
+                    print("Error playing flash sound: \(error)")
+                }
+            }
+        }
 }
 
 struct DeepgramResponse: Codable {
